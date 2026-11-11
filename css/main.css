@@ -210,7 +210,7 @@ header {
     object-fit: cover;
 }
 
-/* AI prompt Make each gallery photo fade in and rise gently as it enters the screen */
+/* AI prompt Make each gallery photo fade in and rise gently as it comes into view */
 @supports (animation-timeline: view()) {
     .pictures img {
         animation: galleryAppear 1s linear both;
@@ -354,6 +354,130 @@ header {
     color: #000000;
 }
 
+/* This gives the story section some space */
+.story {
+    padding: 4rem 0;
+}
+
+/* This puts the picture above the text on mobile */
+.story-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* This makes the picture fit its space */
+.story-row img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* This adds space between the story paragraphs */
+.story-info > p:not(.yellow-text) {
+    line-height: 1.5;
+    margin: 0 0 1rem;
+}
+
+/* This makes the story button black */
+.black-btn {
+    margin-top: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* This changes the button color when hovered */
+.black-btn:hover {
+    background-color: #966f2c;
+}
+
+/* This gives the button a visible keyboard focus */
+.black-btn:focus-visible {
+    background-color: #966f2c;
+}
+
+/* This gives the reviews a black background */
+.people {
+    padding: 4rem 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* This styles the reviews title */
+.people h2 {
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+}
+
+/* This puts the reviews under each other on phones */
+.people-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* This keeps the text at the bottom of each photo */
+.person {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 28rem;
+    overflow: hidden;
+}
+
+/* This makes each picture cover the whole review */
+.person img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* AI prompt Make the review photo grow a little when someone moves the mouse over it and shrink back smoothly when they move away */
+.person:hover img,
+.person:focus-within img {
+    transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .person img {
+        transition: none;
+    }
+}
+
+/* This keeps the review text above the picture */
+.review-text {
+    position: relative;
+    width: 100%;
+    padding: 4rem 1rem 1rem;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+}
+
+/* This removes the normal spacing from quotes */
+.review-text blockquote {
+    margin: 0;
+}
+
+/* This controls the size of the customer review */
+.review-text p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+}
+
+/* This makes the customer name yellow */
+.customer {
+    color: #d69e3d;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 2.986rem;
@@ -416,6 +540,34 @@ header {
     .place-list > div {
         flex: 1;
     }
+
+    /* This puts the photo and text next to each other */
+    .story-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .story-row > img {
+        width: calc(50% - 1.5rem);
+    }
+
+    .story-info {
+        flex: 1;
+    }
+
+    .people h2 {
+        max-width: 60%;
+    }
+
+    /* This puts the three reviews next to each other */
+    .people-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .person {
+        min-height: 24rem;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -456,4 +608,24 @@ header {
     .reason {
         width: calc(33.333% - 1.5rem);
     }
+}
+
+/* This gives the footer a black background */
+footer {
+    padding-bottom: 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* This adds a small line above the text */
+footer .content {
+    border-top: 1px solid #555555;
+    padding-top: 1.5rem;
+}
+
+/* This sets the size of the copyright text */
+footer p {
+    font-size: 0.875rem;
+    margin: 0;
 }
