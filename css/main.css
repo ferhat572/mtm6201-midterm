@@ -16,6 +16,22 @@ h1, h2, h3, nav {
     font-family: "Lato", sans-serif;
 }
 
+h1 {
+    font-size: 2.027rem;
+}
+
+h2 {
+    font-size: 1.802rem;
+}
+
+h3 {
+    font-size: 1.424rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 /* This keeps the page content from getting too wide */
 .content {
     max-width: 1200px;
@@ -37,4 +53,151 @@ h1, h2, h3, nav {
     background-color: #ffffff;
     color: #000000;
     z-index: 10;
+}
+
+/* This gives the top of the page a black background */
+header {
+    background-color: #000000;
+    padding: 1rem 0;
+}
+
+/* This puts the logo and links in the center on phones */
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* This controls how big the logo looks */
+.head img {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+}
+
+/* This puts the menu links next to each other */
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* This changes how the menu links look */
+.links a {
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* This changes the color when the mouse is over a link */
+.links a:hover {
+    color: #d69e3d;
+}
+
+/* This shows which link is selected with the keyboard */
+.links a:focus-visible {
+    color: #d69e3d;
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* This puts the main message over the coffee photo */
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 9rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero-background.jpg");
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* This keeps the hero text easy to read */
+.home-text {
+    max-width: 34rem;
+    margin: 0 auto;
+}
+
+.home h1 {
+    margin: 0 0 0.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.home p {
+    max-width: 30rem;
+    margin: 0 auto 1rem;
+}
+
+/* This makes the menu link look like a button */
+.btn-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-link:hover,
+.btn-link:focus-visible {
+    background-color: #d69e3d;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.986rem;
+    }
+
+    h2 {
+        font-size: 2.488rem;
+    }
+
+    h3 {
+        font-size: 1.728rem;
+    }
+
+    .home {
+        min-height: 14rem;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 3.815rem;
+    }
+
+    h2 {
+        font-size: 3.052rem;
+    }
+
+    h3 {
+        font-size: 1.953rem;
+    }
+
+    .head {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .head img {
+        width: 150px;
+    }
+
+    .home {
+        min-height: 21rem;
+    }
+
 }
