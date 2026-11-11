@@ -258,6 +258,102 @@ header {
     grid-column: span 2;
 }
 
+/* This adds space around the reasons section */
+.reasons {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* This styles the main title */
+.reasons h2 {
+    text-transform: uppercase;
+    margin: 0 0 3rem;
+}
+
+/* This puts each reason under the other on phones */
+.reason-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* This keeps each reason in the center */
+.reason {
+    text-align: center;
+}
+
+/* This sets the size of the icons */
+.reason img {
+    width: 6rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* This styles the title of each reason */
+.reason h3 {
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+}
+
+/* This makes the text easier to read */
+.reason p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* AI prompt: Add a dark layer over the photo so white text is easy to read */
+.places {
+    padding: 4rem 0;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("../images/coffee-shop.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* This puts the two parts under each other */
+.place-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* This styles the two headings */
+.places h2 {
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+}
+
+/* This makes the second button transparent */
+.border-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* This changes the second button when hovered */
+.border-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* This shows the button when using the keyboard */
+.border-btn:focus-visible {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* This changes the button when clicked */
+.border-btn:active {
+    background-color: #d69e3d;
+    color: #000000;
+}
+
 @media (min-width: 768px) {
     h1 {
         font-size: 2.986rem;
@@ -298,6 +394,28 @@ header {
         height: 100%;
         aspect-ratio: auto;
     }
+
+    /* This puts two reasons in each row on tablets */
+    .reason-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem 2rem;
+    }
+
+    .reason {
+        width: calc(50% - 1rem);
+    }
+
+    /* This puts the menu and locations next to each other */
+    .place-list {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .place-list > div {
+        flex: 1;
+    }
 }
 
 @media (min-width: 1100px) {
@@ -332,5 +450,10 @@ header {
         min-height: 21rem;
         padding: 4rem 0;
         background-position: center 30%;
+    }
+
+    /* This puts the three reasons on the same row */
+    .reason {
+        width: calc(33.333% - 1.5rem);
     }
 }
