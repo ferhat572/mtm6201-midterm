@@ -108,51 +108,72 @@ header {
     outline-offset: 4px;
 }
 
-/* This puts the main message over the coffee photo */
+/* This section has the big coffee background photo */
 .home {
-    display: flex;
+    display: grid;
     align-items: center;
     min-height: 9rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/hero-background.jpg");
-    background-position: center;
+    padding: 2rem 0;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../images/hero-background.jpg");
     background-size: cover;
+    background-position: center;
     color: #ffffff;
     text-align: center;
 }
 
-/* This keeps the hero text easy to read */
+/* This makes the text stay in the middle */
 .home-text {
-    max-width: 34rem;
+    max-width: 40rem;
     margin: 0 auto;
 }
 
+/* This styles the main heading */
 .home h1 {
-    margin: 0 0 0.5rem;
+    margin: 0 0 1rem;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
+/* This adds some space under the paragraph */
 .home p {
-    max-width: 30rem;
-    margin: 0 auto 1rem;
+    margin: 0 0 2rem;
 }
 
 /* This makes the menu link look like a button */
 .btn-link {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
     background-color: #ffffff;
     color: #000000;
-    font-size: 0.75rem;
-    font-weight: 900;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid transparent;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-link:hover,
+/* This changes the button color when we hover */
+.btn-link:hover {
+    background-color: #d69e3d;
+}
+
+/* This helps people who use the keyboard */
 .btn-link:focus-visible {
     background-color: #d69e3d;
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* This changes the button when it is clicked */
+.btn-link:active {
+    background-color: #966f2c;
+    color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -168,13 +189,18 @@ header {
         font-size: 1.728rem;
     }
 
-    .home {
-        min-height: 14rem;
+    /* This gives the links more space on tablets */
+    .links {
+        gap: 2rem;
     }
 
+    .home {
+        min-height: 14rem;
+        padding: 3rem 0;
+    }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     h1 {
         font-size: 3.815rem;
     }
@@ -187,6 +213,7 @@ header {
         font-size: 1.953rem;
     }
 
+    /* This puts the logo on the left and menu on the right */
     .head {
         flex-direction: row;
         justify-content: space-between;
@@ -198,6 +225,7 @@ header {
 
     .home {
         min-height: 21rem;
+        padding: 4rem 0;
+        background-position: center 30%;
     }
-
 }
