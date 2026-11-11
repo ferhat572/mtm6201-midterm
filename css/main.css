@@ -1,0 +1,40 @@
+/* This makes padding part of the element size */
+* {
+    box-sizing: border-box;
+}
+
+/* This sets the main font and background */
+body {
+    margin: 0;
+    background-color: #f3f0e9;
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+}
+
+/* These elements use the Lato font */
+h1, h2, h3, nav {
+    font-family: "Lato", sans-serif;
+}
+
+/* This keeps the page content from getting too wide */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* This hides the skip link at first */
+.skip {
+    position: absolute;
+    left: -9999px;
+}
+
+/* This shows the skip link when using the keyboard */
+.skip:focus {
+    left: 1rem;
+    top: 1rem;
+    padding: 0.5rem;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 10;
+}
