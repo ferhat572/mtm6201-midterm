@@ -1,9 +1,9 @@
-/* This makes padding part of the element size */
+/* makes padding part of the element size */
 * {
     box-sizing: border-box;
 }
 
-/* This sets the main font and background */
+/* sets the main font and background */
 body {
     margin: 0;
     background-color: #f3f0e9;
@@ -11,7 +11,7 @@ body {
     font-size: 1rem;
 }
 
-/* These elements use the Lato font */
+/* elements use the Lato font */
 h1, h2, h3, nav {
     font-family: "Lato", sans-serif;
 }
@@ -32,7 +32,7 @@ p {
     font-size: 1rem;
 }
 
-/* This keeps the page content from getting too wide */
+/* keeps the page content from getting too wide */
 .content {
     max-width: 1200px;
     margin: 0 auto;
@@ -55,7 +55,7 @@ p {
     z-index: 10;
 }
 
-/* This gives the top of the page a black background */
+/* gives the top of the page a black background */
 header {
     background-color: #000000;
     padding: 1rem 0;
@@ -76,7 +76,7 @@ header {
     max-width: 100%;
 }
 
-/* This puts the menu links next to each other */
+/* puts the menu links next to each other */
 .links {
     display: flex;
     justify-content: center;
@@ -108,7 +108,7 @@ header {
     outline-offset: 4px;
 }
 
-/* This section has the big coffee background photo */
+/* section has the big coffee background photo */
 .home {
     display: grid;
     align-items: center;
@@ -140,7 +140,7 @@ header {
     text-transform: uppercase;
 }
 
-/* This adds some space under the paragraph */
+/* adds some space under the paragraph */
 .home p {
     margin: 0 0 2rem;
 }
@@ -176,7 +176,7 @@ header {
     color: #ffffff;
 }
 
-/* This adds space above and below the pictures */
+/* adds space above and below the pictures */
 .welcome {
     padding: 4rem 0;
 }
@@ -195,7 +195,7 @@ header {
     margin: 0 0 1.5rem;
 }
 
-/* This makes two columns for the pictures */
+/* makes two columns for the pictures */
 .pictures {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -253,7 +253,7 @@ header {
     }
 }
 
-/* This makes the first picture take both columns */
+/* makes the first picture take both columns */
 .pictures .big {
     grid-column: span 2;
 }
@@ -277,25 +277,25 @@ header {
     gap: 3rem;
 }
 
-/* This keeps each reason in the center */
+/*  keeps each reason in the center */
 .reason {
     text-align: center;
 }
 
-/* This sets the size of the icons */
+/*  sets the size of the icons */
 .reason img {
     width: 6rem;
     height: auto;
     margin-bottom: 1rem;
 }
 
-/* This styles the title of each reason */
+/*  styles the title of each reason */
 .reason h3 {
     text-transform: uppercase;
     margin: 0 0 1rem;
 }
 
-/* This makes the text easier to read */
+/*  makes the text easier to read */
 .reason p {
     line-height: 1.5;
     margin: 0;
@@ -329,7 +329,7 @@ header {
     margin: 0 0 2rem;
 }
 
-/* This makes the second button transparent */
+/*  makes the second button transparent */
 .border-btn {
     background-color: transparent;
     color: #ffffff;
@@ -342,7 +342,7 @@ header {
     color: #000000;
 }
 
-/* This shows the button when using the keyboard */
+/*  shows the button when using the keyboard */
 .border-btn:focus-visible {
     background-color: #ffffff;
     color: #000000;
@@ -354,7 +354,7 @@ header {
     color: #000000;
 }
 
-/* This gives the story section some space */
+/*  gives the story section some space */
 .story {
     padding: 4rem 0;
 }
@@ -366,7 +366,7 @@ header {
     gap: 2rem;
 }
 
-/* This makes the picture fit its space */
+/*  makes the picture fit its space */
 .story-row img {
     display: block;
     width: 100%;
@@ -379,44 +379,44 @@ header {
     margin: 0 0 1rem;
 }
 
-/* This makes the story button black */
+/*  makes the story button black */
 .black-btn {
     margin-top: 1rem;
     background-color: #000000;
     color: #ffffff;
 }
 
-/* This changes the button color when hovered */
+/*  changes the button color when hovered */
 .black-btn:hover {
     background-color: #966f2c;
 }
 
-/* This gives the button a visible keyboard focus */
+/*  gives the button a visible keyboard focus */
 .black-btn:focus-visible {
     background-color: #966f2c;
 }
 
-/* This gives the reviews a black background */
+/*  gives the reviews a black background */
 .people {
     padding: 4rem 0;
     background-color: #000000;
     color: #ffffff;
 }
 
-/* This styles the reviews title */
+/*  styles the reviews title */
 .people h2 {
     text-transform: uppercase;
     margin: 0 0 2rem;
 }
 
-/* This puts the reviews under each other on phones */
+/*  puts the reviews under each other on phones */
 .people-list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-/* This keeps the text at the bottom of each photo */
+/*  keeps the text at the bottom of each photo */
 .person {
     position: relative;
     display: flex;
@@ -425,7 +425,7 @@ header {
     overflow: hidden;
 }
 
-/* This makes each picture cover the whole review */
+/*  makes each picture cover the whole review */
 .person img {
     position: absolute;
     top: 0;
@@ -448,7 +448,7 @@ header {
     }
 }
 
-/* This keeps the review text above the picture */
+/*  keeps the review text above the picture */
 .review-text {
     position: relative;
     width: 100%;
@@ -464,7 +464,7 @@ header {
     margin: 0;
 }
 
-/* This controls the size of the customer review */
+/*  controls the size of the customer review */
 .review-text p {
     font-size: 0.875rem;
     line-height: 1.5;
@@ -491,7 +491,7 @@ header {
         font-size: 1.728rem;
     }
 
-    /* This gives the links more space on tablets */
+    /*  gives the links more space on tablets */
     .links {
         gap: 2rem;
     }
@@ -501,7 +501,7 @@ header {
         padding: 3rem 0;
     }
 
-    /* This changes the pictures into three columns on tablets */
+    /*  changes the pictures into three columns on tablets */
     .welcome h2 {
         font-size: 2.488rem;
         max-width: 60%;
@@ -511,7 +511,7 @@ header {
         grid-template-columns: 2fr 1fr 1fr;
     }
 
-    /* This makes the big picture take two rows */
+    /*  makes the big picture take two rows */
     .pictures .big {
         grid-column: 1;
         grid-row: span 2;
@@ -531,7 +531,7 @@ header {
         width: calc(50% - 1rem);
     }
 
-    /* This puts the menu and locations next to each other */
+    /*  puts the menu and locations next to each other */
     .place-list {
         flex-direction: row;
         gap: 2rem;
@@ -541,7 +541,7 @@ header {
         flex: 1;
     }
 
-    /* This puts the photo and text next to each other */
+    /*  puts the photo and text next to each other */
     .story-row {
         flex-direction: row;
         align-items: center;
@@ -560,7 +560,7 @@ header {
         max-width: 60%;
     }
 
-    /* This puts the three reviews next to each other */
+    /*  puts the three reviews next to each other */
     .people-list {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -588,7 +588,7 @@ header {
         font-size: 3.052rem;
     }
 
-    /* This puts the logo on the left and menu on the right */
+    /*  puts the logo on the left and menu on the right */
     .head {
         flex-direction: row;
         justify-content: space-between;
@@ -618,13 +618,13 @@ footer {
     text-align: center;
 }
 
-/* This adds a small line above the text */
+/*  adds a small line above the text */
 footer .content {
     border-top: 1px solid #555555;
     padding-top: 1.5rem;
 }
 
-/* This sets the size of the copyright text */
+/*  sets the size of the copyright text */
 footer p {
     font-size: 0.875rem;
     margin: 0;
